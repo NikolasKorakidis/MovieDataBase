@@ -6,7 +6,6 @@ const NavBar = () => {
       <nav>
         <ul>
           <li>
-            {/* // Ask about font-weight: bold; */}
             <NavLink
               exact={true}
               activeStyle={{
@@ -39,7 +38,7 @@ const NavBar = () => {
               }}
               to="/discover"
             >
-              Users
+              Discover
             </NavLink>
           </li>
         </ul>
