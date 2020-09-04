@@ -36,7 +36,7 @@ const NavBar = () => {
                 fontWeight: "bold",
                 color: "red",
               }}
-              to="/discover"
+              to="/discover/"
             >
               Discover
             </NavLink>

@@ -7,14 +7,17 @@ export default function MoviePage() {
   const [movie, setmovie] = useState([]);
   //   console.log(route_parameters);
 
-  useEffect(async () => {
-    const movieId = route_parameters.imdb_id;
-    const fetchedMovie = await axios.get(
-      `http://www.omdbapi.com/?apikey=f0d0fe5&i=${movieId}`
-    );
+  useEffect(() => {
+    const getMovie = async () => {
+      const movieId = route_parameters.imdb_id;
+      const fetchedMovie = await axios.get(
+        `http://www.omdbapi.com/?apikey=f0d0fe5&i=${movieId}`
+      );
 
-    setmovie(fetchedMovie.data);
-  }, []);
+      setmovie(fetchedMovie.data);
+    };
+    getMovie();
+  }, [route_parameters.imdb_id]);
 
   console.log(movie);
 
